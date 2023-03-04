@@ -1,0 +1,135 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <!-- <div>
+      <h4>Main event photo</h4>
+        <img  src={{workshop.photo}} width="300px" height="300px">
+    </div> -->
+    <div class="event-photo">
+      <h4>Main event photo</h4>
+      <img src="{{workshop.photo}}" alt="Workshop photo" width="400px" height="300px">
+    </div>
+    
+    </div>
+    <div class="col">
+      <h4>Edit information form</h4>
+      <!-- <body> -->
+        
+
+      <form >
+          <table class="table table-striped">
+              <tr>
+                  <td>Name</td>
+                  <td>
+                      <input required type='text' name='name' [(ngModel)]='workshop.name'>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Location</td>
+                  <td>
+                      <input required type='text' name='location' [(ngModel)]='workshop.location'>
+                  </td>
+              </tr>
+              <tr>
+                  <td>Date</td>
+                  <td>
+                      <input required type='date' name='date' value={{workshop.date.toLocaleDateString()}} [(ngModel)]='workshop.date'>
+                  </td>
+              </tr>
+
+              <tr>
+                <td>Capacity</td>
+                <td>
+                    <input type='email' name='capacity' [(ngModel)]='workshop.capacity'>
+                </td>
+            </tr>
+              <tr>
+                  <td>Basic information</td>
+                  <td>
+                      <textarea name="basicinfo" id="" [(ngModel)]='workshop.basicinfo'></textarea>
+                  </td>
+              </tr>
+              <tr>
+                <td>Complete description</td>
+                <td colspan="2">
+                    <textarea name="longinfo" id="" [(ngModel)]='workshop.longinfo'></textarea>
+                </td>
+            </tr>
+              <tr>
+                  <td>Main picture</td>
+                  <td>
+                      <input type='file' name='picture' (change)="fileChangeMain($event)">
+                  </td>
+              </tr>
+
+          </table>
+      </form>
+    <!-- </body> -->
+      <span class='greska'>{{message}}</span>
+    </div>
+
+    <div class="col" *ngIf="me.username == workshop.creator" >
+  <h4 class="reservation-heading">Reservation requests:</h4>
+  <table class="reservation-table">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let p of prijavljeni'>
+        <td>{{p}}</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-success"(click)="approve(p)" >Approve</button>
+            <button type="button" class="btn btn-danger" (click)="reject(p)">Reject</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    <!-- <div class="col">
+      <h4>Reservation requests:</h4>
+      <table class="table">
+        <tr>
+          <th>User</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor='let p of prijavljeni'>
+          <td>{{p}}</td>
+          <td>
+              <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                  <button type="button" class="btn btn-success"(click)="approve(p)" >Approve</button>
+                  <button type="button" class="btn btn-danger" (click)="reject(p)">Reject</button>
+                </div>
+          </td>
+        </tr>
+      </table>
+    </div> -->
+  </div>
+</div>
+<hr/>
+
+<!-- <h4>Gallery</h4> -->
+<h4 class="gallery-title">Gallery</h4>
+
+<div class="container-fluid">
+  <div *ngFor="let pic of workshop.gallery;index as i" class="slika" >
+    <h4><i class="bi bi-x-circle-fill deleteBtn" (click)="deleteButton(i)" ></i></h4>
+    <img src={{pic.photo}} width="300px" height="300px">  
+    &nbsp;
+  </div>
+  <div *ngIf="workshop.gallery.length < 5" >
+    <br/>
+    <input type='file' name='picture' (change)="fileChange($event)">
+  </div>
+<hr/>
+  <br/>
+<div class="saveBtn">
+  <button type="button" class="btn btn-success" (click)="saveEdit()" >Save changes</button>
+  <button type="button" class="btn btn-primary" (click)="saveAsTemplate()" >Save as template</button>
+
+</div>

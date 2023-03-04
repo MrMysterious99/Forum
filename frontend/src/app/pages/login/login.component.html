@@ -1,0 +1,59 @@
+<!-- <div class="container-fluid ">
+    <div class="login">
+    <img src="../../../assets/pia.png" alt="">
+    </div>
+    <div class="col-md-12" >
+    <form class="login">
+        <table>
+            <tr>
+                <td>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Username</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"  name='kor_ime' [(ngModel)]='username'>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Password</span>
+                        <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name='lozinka' [(ngModel)]='password'>
+                      </div>
+                </td>
+            </tr>
+            <tr>
+          </tr>
+            <tr>
+                <td colspan='2'>
+                    <div class="login">
+                        <button type="button" class="btn btn-primary" (click)="login()" >Log in</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <span class='greska'>{{message}}</span>
+
+<hr/>
+<button type="button" class="btn btn-primary" routerLink="register" >Register</button> -->
+<body>
+    <div class="container">
+      <form>
+        <h2>Login</h2>
+        <div class="input-field">
+          <input type="text" required name='kor_ime' [(ngModel)]='username' />
+          <label for="username" >Username</label>
+        </div>
+        <div class="input-field">
+          <input type="password" required name='lozinka' [(ngModel)]='password' />
+          <label for="password" >Password</label>
+        </div>
+        <button type="submit" (click)="login()">Log In</button><br/>
+        <hr/>
+        <button type="button" routerLink="register">Register</button>
+
+      </form>
+    <span class='greska'>{{message}}</span>
+
+    </div>
+  </body>

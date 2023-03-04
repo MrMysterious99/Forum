@@ -1,0 +1,93 @@
+/* .slika{
+    display: inline-block;
+}
+
+.saveBtn{
+    display: flex;
+    justify-content: right;
+}
+
+.deleteBtn{
+    cursor: pointer;
+} */
+
+/* Style for the container holding the main event photo and workshop information */
+.container-fluid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Style for the columns holding the main event photo and workshop information */
+  .col {
+    flex-basis: 50%;
+    padding: 1rem;
+  }
+  
+  /* Style for the main event photo */
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Style for the form and table in the workshop information column */
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  td {
+    padding: 0.5rem;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  textarea {
+    height: 8rem;
+  }
+  
+  /* Style for the gallery section */
+  h4 {
+    margin-top: 2rem;
+  }
+  
+  .slika {
+    display: inline-block;
+    margin: 1rem;
+    position: relative;
+  }
+  
+  .deleteBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: red;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Style for the save proposal and load template buttons */
+  .saveBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  button {
+    margin: 0 1rem;
+  }
+  

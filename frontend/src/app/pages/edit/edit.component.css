@@ -1,0 +1,245 @@
+.slika{
+    display: inline-block;
+}
+
+.deleteBtn{
+    cursor: pointer;
+}
+.saveBtn{
+    display: flex;
+    justify-content: right;
+}
+
+
+
+
+    /* Change the delete button color on hover */
+    .deleteBtn:hover {
+        background-color: #c82333;
+      }
+      
+      /* Scale the image and add a shadow on hover */
+      .slika img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+       /* Style the delete button */
+  .deleteBtn {
+    /* display: block; */
+    margin: 0 auto;
+    font-size: 24px;
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    /* position: absolute; */
+    top: 10px;
+    right: 10px;
+    z-index: 1; /* make the delete button appear on top of the image */
+    transition: all 0.3s ease-in-out; /* add a smooth transition when the delete button is hovered over */
+  }
+
+
+
+
+  /* .reservation-heading {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  
+  .reservation-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+  }
+  
+  .reservation-table th {
+    text-align: left;
+    padding: 0.5em;
+    background-color: #f7f7f7;
+  }
+  
+  .reservation-table td {
+    padding: 0.5em;
+    border: 1px solid #ddd;
+  }
+  
+  .approve-btn, .reject-btn {
+    padding: 0.5em 1em;
+    border-radius: 0.25em;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .approve-btn {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+  
+  .reject-btn {
+    background-color: #dc3545;
+    border-color: #dc3545;
+  } */
+  .reservation-heading {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  box-shadow: 0px 0px 10px #ddd;
+}
+
+.reservation-table th {
+  text-align: left;
+  padding: 0.5em;
+  background-color: #f7f7f7;
+}
+
+.reservation-table td {
+  padding: 0.5em;
+  border: 1px solid #ddd;
+}
+
+.reservation-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.approve-btn, .reject-btn {
+  padding: 0.5em 1em;
+  border-radius: 0.25em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.approve-btn {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.reject-btn {
+  background-color: #dc3545;
+  border-color: #dc3545;
+}
+
+
+.event-photo {
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    position: relative;
+  }
+  
+  .event-photo h4 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 1px 1px 1px #000;
+  }
+  
+  .event-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  .gallery-title {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+
+
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
+
+  h4 {
+    text-align: center;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+
+  td:first-child {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+
+  input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: white;
+  }
+
+  input[type="file"] {
+    display: block;
+    margin-top: 8px;
+  }
+
+  input[type="submit"] {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }

@@ -1,0 +1,163 @@
+<h2>My information</h2>
+<!-- <span>
+  <img  src="{{me.photo}}" class="img-thumbnail" width="300px" height="300px">
+</span>
+<span>{{me.name}} {{me.surname}} @{{me.username}} | {{me.email}} | {{me.email}} | {{me.phone}} | {{me.organization}} | {{me.country}} | {{me.postalcode}} | {{me.street}}</span> -->
+
+<div class="user-info">
+  <img src="{{me.photo}}" class="img-thumbnail" alt="Profile Photo">
+  <div>
+    <div class="username">{{me.name}} {{me.surname}} @{{me.username}}</div>
+    <div class="contact-info">
+      <div>{{me.email}}</div>
+      <div>{{me.phone}}</div>
+      <div>{{me.organization}}</div>
+      <div>{{me.country}}, {{me.postalcode}}</div>
+      <div>{{me.street}}</div>
+      <div><button [routerLink]="['/useredit', me.id, 'yes']" class="btn btn-info"><i class="bi bi-gear-wide-connected"></i>&nbsp;Edit Profile</button></div>
+    </div>
+  </div>
+</div>
+<hr/>
+
+<div *ngIf="radionice.length > 0" >
+  <h3>Past attendances:</h3>
+<table class="table table-success table-striped" >
+  <tr>
+    <th class="sort_name" (click)="sortName()">Name <i class="bi bi-sort-alpha-down"></i></th>
+    <th class="sort_name" (click)="sortLocation()">Location <i class="bi bi-sort-alpha-down"></i></th>
+    <th class="sort_name" (click)="sortDate()">Date <i class="bi bi-sort-numeric-down"></i></th>
+    <th class="sort_name" (click)="sortBasicInfo()">Basic info <i class="bi bi-sort-alpha-down"></i></th>
+    <!-- <th>All information</th> -->
+    <th class="sort_name" (click)="sortCreator()">Creator <i class="bi bi-sort-alpha-down"></i></th>
+    <th class="sort_name" (click)="sortLikes()">Likes <i class="bi bi-sort-numeric-down"></i></th>
+    <!-- <th>Like</th> -->
+  </tr>
+  <tr *ngFor='let w of radionice'>
+    <td>{{w.name}}</td>
+    <td>{{w.location}}</td>
+    <td>{{w.date.toLocaleDateString()}}</td>
+    <td>{{w.basicinfo}}</td>
+    <!-- <td>{{w.longinfo}}</td> -->
+    <td>{{w.creator}}</td>
+    <td>{{w.likes.length}}</td>
+    <!-- <td><button (click)='like(w)'>Lajkuj</button></td> -->
+  </tr>
+</table>
+<hr/>
+</div>
+
+
+<h3>My comments:</h3>
+<div class="comment-container" *ngFor="let kom of comments">
+  <div class="comment">
+     "{{kom.komentar.text}}" on workshop: {{kom.workshop.name}}<br/>
+     {{kom.komentar.date.toLocaleDateString()}}
+  </div>
+  <!-- <hr/> -->
+</div>
+
+<!-- <h3>My comments:</h3>
+<div *ngFor="let kom of comments">
+  <div>
+     "{{kom.komentar.text}}" on workshop: {{kom.workshop.name}}<br/>
+     {{kom.komentar.date.toLocaleDateString()}}
+  </div>
+  <hr/>
+</div>
+<hr/> -->
+
+<h3 class="workshop-heading">Liked workshops:</h3>
+<div class="liked-workshops">
+  <div *ngFor="let like of liked" class="workshop">
+    {{like.name}}
+  </div>
+</div>
+
+<!-- <h3>Liked workshops:</h3>
+<div *ngFor="let like of liked" >
+  <div>
+    {{like.name}}
+  </div>
+</div> -->
+
+<hr/>
+
+
+<div *ngIf="me.type == 'admin'">
+<!-- <h3 class="workshop-heading">All users in the system:</h3> -->
+<h3 class="workshop-heading">All users in the system:
+  <button type="button" [routerLink]="['/register']" class="btn btn-info"><i class="bi bi-person-add"></i>&nbsp;add user</button>
+</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Profile Picture</th>
+        <th>Name</th>
+        <th>Username</th>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Company</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users" >
+        <td><img src={{user.photo}} alt="Profile Picture"></td>
+        <td>{{user.name}} {{user.surname}}</td>
+        <td>@{{user.username}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.country}}, {{user.street}}</td>
+        <td>{{user.organization}}</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-success" *ngIf="user.status == 'inactive'" ><i class="bi bi-check-circle"></i>&nbsp;Approve</button>
+            <button type="button" class="btn btn-info" name="editBtn" [routerLink]="['/useredit', user.id, 'no']" ><i class="bi bi-gear-wide-connected"></i>&nbsp;Edit</button>
+            <button type="button" (click)="deleteUser(user.id)" class="btn btn-danger"><i class="bi bi-file-earmark-x"></i>&nbsp;Delete</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr/>
+
+  <h3 class="workshop-heading">All workshops in the system:
+    <button type="button" [routerLink]="['/organize']" class="btn btn-info"><i class="bi bi-clipboard-plus"></i>&nbsp;add workshop</button>
+  </h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Main photo</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>Basic information</th>
+        <th>Creator</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let w of sveRadionice" >
+        <td><img style="border-radius: 10%; width: 60px;" src={{w.photo}} alt="Profile Picture"></td>
+        <td>{{w.name}}</td>
+        <td>{{w.location}}</td>
+        <td>{{w.date.toLocaleDateString()}}</td>
+        <td>{{w.basicinfo}}</td>
+        <td>@{{w.creator}}</td>
+        <td>
+          <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="btn btn-success" (click)="approveWorkshop(w.id)" *ngIf="w.approved == 'pending'" ><i class="bi bi-check-circle"></i>&nbsp;Approve</button>
+            <button type="button" class="btn btn-info" name="editBtn" [routerLink]="['/edit', w.id]"><i class="bi bi-gear-wide-connected"></i>&nbsp;Edit</button>
+            <button type="button" (click)="deleteWorkshop(w.id)" class="btn btn-danger"><i class="bi bi-file-earmark-x"></i>&nbsp;Delete</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+</div>

@@ -1,0 +1,337 @@
+{
+    "_id" : ObjectId("63ee813be2ceba48a4de9b02"),
+    "userA" : "ironman",
+    "userB" : "zucc",
+    "messages" : [ 
+        {
+            "sender" : "ironman",
+            "text" : "e cao da li ima mesta za ovo programiranje",
+            "time" : "2023-02-07"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "naravno da ima ajde prijavi se",
+            "time" : "2023-02-07"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "u redu hvala",
+            "time" : "2023-02-07"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "ee evo prijavio sam see :D",
+            "time" : "2023-02-17T11:08:59.075Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "da li je ovo legit ? ",
+            "time" : "2023-02-17T11:09:29.832Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "drago mi je da si se prijavio, vidimo se",
+            "time" : "2023-02-07"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "vidimo se",
+            "time" : "2023-02-17T11:11:50.396Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "proba chata iz drugog browsera",
+            "time" : "2023-02-17T11:13:05.647Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "probaaa",
+            "time" : "2023-02-17T11:14:18.583Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "probaaa",
+            "time" : "2023-02-17T11:14:40.943Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "probaaa",
+            "time" : "2023-02-17T11:14:41.102Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "probaaa",
+            "time" : "2023-02-17T11:14:41.235Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "probaaa",
+            "time" : "2023-02-17T11:14:41.347Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "1 2 3 ",
+            "time" : "2023-02-17T11:20:23.214Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "aloo",
+            "time" : "2023-02-17T11:26:57.980Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "aloo",
+            "time" : "2023-02-17T11:27:01.612Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "da li ovo radi ?",
+            "time" : "2023-02-17T11:27:39.321Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "je l radi ovo wtf ",
+            "time" : "2023-02-17T11:27:47.567Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "je l radi ovo wtf ",
+            "time" : "2023-02-17T11:27:49.985Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "ovde ima neki bug ",
+            "time" : "2023-02-17T11:27:57.534Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "ovde ima neki bug ",
+            "time" : "2023-02-17T11:27:59.699Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "ovde ima neki bug ",
+            "time" : "2023-02-17T11:28:01.123Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "ovde ima neki bug ",
+            "time" : "2023-02-17T11:28:01.540Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "ovde ima neki bug ",
+            "time" : "2023-02-17T11:28:01.698Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "1",
+            "time" : "2023-02-17T11:28:04.598Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "2",
+            "time" : "2023-02-17T11:28:13.598Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "4",
+            "time" : "2023-02-17T11:28:16.389Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "",
+            "time" : "2023-02-17T11:28:22.549Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "",
+            "time" : "2023-02-17T11:28:23.301Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "",
+            "time" : "2023-02-17T11:28:23.682Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "",
+            "time" : "2023-02-17T11:28:24.152Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "",
+            "time" : "2023-02-17T11:28:24.827Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "",
+            "time" : "2023-02-17T11:28:24.984Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "uh brt",
+            "time" : "2023-02-17T11:28:43.436Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "jeri radi sada bree",
+            "time" : "2023-02-17T11:49:46.093Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "je l radi novo dugme ?",
+            "time" : "2023-02-17T11:51:12.864Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "a sa formom ?",
+            "time" : "2023-02-17T11:53:00.945Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "opa radi",
+            "time" : "2023-02-17T11:53:07.718Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "toppp",
+            "time" : "2023-02-17T11:53:13.680Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "gde si kucooo ",
+            "time" : "2023-02-17T11:55:08.091Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "evo skolskii",
+            "time" : "2023-02-17T11:57:08.390Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "alo",
+            "time" : "2023-02-17T12:00:38.296Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "123",
+            "time" : "2023-02-17T12:07:02.375Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "1312",
+            "time" : "2023-02-17T12:07:08.041Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "proba",
+            "time" : "2023-02-17T12:11:17.201Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "aaaa",
+            "time" : "2023-02-17T12:11:42.907Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "alskfhasklh",
+            "time" : "2023-02-17T12:13:32.258Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "456",
+            "time" : "2023-02-17T12:14:20.047Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "eeee",
+            "time" : "2023-02-17T12:44:02.756Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "eeeee",
+            "time" : "2023-02-17T12:44:02.896Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "eeeeee",
+            "time" : "2023-02-17T12:44:02.997Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "eeeeeee",
+            "time" : "2023-02-17T12:44:03.124Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "ale alee",
+            "time" : "2023-02-17T12:47:47.284Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "chat radi ",
+            "time" : "2023-02-17T12:47:58.542Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "idemo dalje",
+            "time" : "2023-02-17T12:47:59.613Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : null,
+            "time" : "2023-02-17T19:24:36.343Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "ee sta ima novo",
+            "time" : "2023-02-17T19:25:15.746Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "pa ja sam doktor",
+            "time" : "2023-02-19T04:21:53.513Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "ja sam jedan veliki doktor",
+            "time" : "2023-02-19T04:23:10.990Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "kako ide brate",
+            "time" : "2023-02-19T04:28:06.822Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "evo gura se",
+            "time" : "2023-02-19T04:28:14.844Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "superr",
+            "time" : "2023-02-19T04:28:23.004Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "dobro jutro",
+            "time" : "2023-02-19T13:12:06.149Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "proslo je 2 sata.. kakvo jutro",
+            "time" : "2023-02-19T13:12:22.061Z"
+        }, 
+        {
+            "sender" : "ironman",
+            "text" : "poz za lakija",
+            "time" : "2023-02-19T20:01:58.873Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "poz pozz",
+            "time" : "2023-02-19T20:02:04.998Z"
+        }
+    ]
+}

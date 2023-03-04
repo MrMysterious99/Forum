@@ -1,0 +1,23 @@
+{
+    "_id" : ObjectId("63f220ed4c5f491e46692080"),
+    "userA" : "steve",
+    "userB" : "zucc",
+    "messages" : [ 
+        {
+            "sender" : "zucc",
+            "text" : "Zdravo",
+            "time" : "2023-02-19T13:15:57.068Z"
+        }, 
+        {
+            "sender" : "zucc",
+            "text" : "da li se i danas oblacimo kao juce i prekljuce",
+            "time" : "2023-02-19T13:16:13.863Z"
+        }, 
+        {
+            "sender" : "steve",
+            "text" : "da.",
+            "time" : "2023-02-19T13:16:35.228Z"
+        }
+    ],
+    "__v" : 0
+}

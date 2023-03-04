@@ -1,0 +1,114 @@
+/* h4 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td {
+    padding: 8px;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  input[type="file"] {
+    border: none;
+  }
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  .greska {
+    color: red;
+    font-size: 16px;
+  }
+  img {
+    display: block;
+    margin-top: 24px;
+  } */
+
+  h4 {
+    font-size: 28px;
+    margin-bottom: 24px;
+  }
+  
+  .registration-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .registration-form {
+    width: 80%;
+    margin-right: 20px;
+  }
+  
+  .preview-container {
+    width: 300px;
+    margin-top: 24px;
+  }
+  
+  form {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  td {
+    padding: 8px;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+  
+  input {
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  input[type="file"] {
+    border: none;
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .greska {
+    color: red;
+    font-size: 16px;
+  }
+  
+  img {
+    display: block;
+    margin-top: 24px;
+  }
+  

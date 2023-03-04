@@ -1,0 +1,110 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group chatDescr">
+            <a class="list-group-item list-group-item-action " (click)="changeChat(chats[0])" >
+                <div class="d-flex w-100 justify-content-between ">
+                    <h5 class="mb-1" *ngIf="me.username != chats[0].userA" >{{chats[0].userA}}</h5>
+                    <h5 class="mb-1" *ngIf="me.username != chats[0].userB" >{{chats[0].userB}}</h5>
+
+                    <div *ngFor="let msg of chats[0].messages;let last = last" >
+                        <small *ngIf="last">{{msg.time.toLocaleDateString()}}</small>
+                    </div>
+                </div>
+                <div *ngFor="let msg of chats[0].messages;let last = last" >
+                    <p *ngIf="last" class="mb-1">{{msg.text}}</p>
+                </div>
+            </a>
+        <div *ngFor="let chat of chats;index as i">
+            <a class="list-group-item list-group-item-action" *ngIf="i>0" (click)="changeChat(chat)" > 
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1" *ngIf="me.username != chat.userA" >{{chat.userA}}</h5>
+                    <h5 class="mb-1" *ngIf="me.username != chat.userB" >{{chat.userB}}</h5>
+                    
+                    <div *ngFor="let msg of chat.messages;let last = last" >
+                        <small *ngIf="last">{{msg.time.toLocaleDateString()}}</small>
+                    </div>
+
+                </div>
+                <div *ngFor="let msg of chat.messages;let last = last" >
+                    <p *ngIf="last" class="mb-1">{{msg.text}}</p>
+                </div>
+                <div *ngIf="chat.messages.length == 0" >
+                    <p>No messages  </p>
+                </div>
+            </a>
+        </div>
+        
+            
+        </div>
+      </div>
+      <div class="col-8">
+
+        <div class="chat-container">
+            <div class="chat-header">
+              <h2>Chat</h2>
+            </div>
+            <div class="skroluj" id="skrolovanje">
+                <div class="chat-history " *ngFor="let chat of chats">
+                    <div *ngIf="(chat.userA == showChat.userA && chat.userB == showChat.userB) || (chat.userB == showChat.userA && chat.userA == showChat.userB)" >
+                        <ul *ngFor="let msg of chat.messages"> 
+                            <li class="message received" *ngIf="me.username != msg.sender">
+                            <div class="avatar"></div>
+                            <div class="message-content">
+                                <p>{{msg.text}}</p>
+                                <span class="time">{{msg.time.toLocaleDateString()}}, {{msg.time.toLocaleTimeString()}}</span>
+                            </div>
+                        </li>
+                        <li class="message sent"*ngIf="me.username == msg.sender">
+                            <div class="message-content">
+                                <p>{{msg.text}}</p>
+                                <span class="time">{{msg.time.toLocaleDateString()}}, {{msg.time.toLocaleTimeString()}}</span>
+                            </div>
+                            &nbsp;<img src={{me.photo}} alt="Profile Picture" class="avatar">
+                        </li>
+                        </ul>
+                </div>
+            </div>
+
+
+            </div>
+            <!-- <div class="chat-footer"> -->
+                <form class="chat-footer">
+                    <input id="text-poruke" type="text" placeholder="Type your message" name='novaPoruka'  [(ngModel)]='novaPoruka'  >
+                    <button (click)="sendMsg()" onclick="document.getElementById('text-poruke').value = ''" >Send</button>
+                </form>
+            <!-- </div> -->
+          </div>
+          
+
+        <!-- <div class="scroll-bar" id="skrolovanje">
+            <div *ngFor="let chat of chats" >
+                <div *ngIf="(chat.userA == showChat.userA && chat.userB == showChat.userB) || (chat.userB == showChat.userA && chat.userA == showChat.userB)" >
+                    <div *ngFor="let msg of chat.messages">
+                        <div>
+                            <div class="levo" *ngIf="me.username != msg.sender">
+                                <div>{{msg.sender}}:</div>
+                                <div>{{msg.text}}</div>
+                            </div>
+                            <div class="desno" *ngIf="me.username == msg.sender">
+                                <div>{{msg.sender}}:</div><br/>
+                                <div>{{msg.text}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="send-msg">
+            <form>
+                <div class="input-group mb-3">
+                    <input id="text-poruke" type="text" class="form-control" placeholder="Message.." aria-label="Recipient's username" aria-describedby="basic-addon2" name='novaPoruka' [(ngModel)]='novaPoruka' >
+                    
+                    <button class="btn btn-primary" (click)="sendMsg()" onclick="document.getElementById('text-poruke').value = ''">Send</button>
+                  </div>       
+            </form>
+        </div>         -->
+      </div>
+    </div>
+  </div>
+

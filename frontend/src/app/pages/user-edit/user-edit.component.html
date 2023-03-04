@@ -1,0 +1,107 @@
+<div class="registration-container">
+    <div class="registration-form">
+      <h4>Registration form</h4>
+      <form>
+        <table>
+            <tr>
+                <td>Name*</td>
+                <td>
+                    <input required type='text' name='name' [(ngModel)]='user.name'>
+                </td>
+            </tr>
+            <tr>
+                <td>Surname*</td>
+                <td>
+                    <input required type='text' name='surname' [(ngModel)]='user.surname'>
+                </td>
+            </tr>
+            <tr>
+                <td>Username*</td>
+                <td>
+                    <input required type='text' name='username' [(ngModel)]='user.username'>
+                </td>
+            </tr>
+            <tr>
+                <td>Password*</td>
+                <td>
+                    <input required type='password' name='password' [(ngModel)]='user.password'>
+                </td>
+            </tr>
+            <tr>
+                <td>Repeat Password*</td>
+                <td>
+                    <input required type='password' name='password2' [(ngModel)]='password2'>
+                </td>
+            </tr>
+            <tr>
+                <td>Phone number*</td>
+                <td>
+                    <input type='text' name='phone' [(ngModel)]='user.phone'>
+                </td>
+            </tr>
+            <tr>
+                <td>Email address*</td>
+                <td>
+                    <input type='email' name='email' [(ngModel)]='user.email'>
+                </td>
+            </tr>
+            <tr>
+                <td>Organization name</td>
+                <td>
+                    <input type='text' name='organizationName' [(ngModel)]='user.organization'>
+                </td>
+            </tr>
+            <tr>
+                <td>Organization country</td>
+                <td>
+                    <input type='text' name='organizationCountry' [(ngModel)]='user.country'>
+                </td>
+            </tr>
+            <tr>
+                <td>Organization city</td>
+                <td>
+                    <input type='text' name='organizationCity' [(ngModel)]='user.city'>
+                </td>
+            </tr>
+            <tr>
+                <td>Postalcode</td>
+                <td>
+                    <input type='text' name='organizationPostalcode' [(ngModel)]='user.postalcode'>
+                </td>
+            </tr>
+            <tr>
+                <td>Organization street</td>
+                <td>
+                    <input type='text' name='organizationStreet' [(ngModel)]='user.street'>
+                </td>
+            </tr>
+            <tr>
+                <td>Tax Identification Number</td>
+                <td>
+                    <input type='text' name='tax' [(ngModel)]='user.taxNumber'>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>Profile picture</td>
+                <td>
+                    <input type='file' name='picture' (change)="fileChange($event)">
+                </td>
+            </tr> -->
+            <tr>
+                <td colspan='2'>
+                    <button type="button" class="btn btn-success" (click)="saveUserEdit()" >Save</button>
+                </td>
+            </tr>
+        </table>
+      </form>
+      <span class="greska">{{message}}</span>
+    </div>
+    <div class="preview-container">
+      <h4>Profile picture preview</h4>
+      <div *ngIf=user.photo>
+        <img src={{user.photo}} class="img-thumbnail" width="300px" height="300px" />
+      </div>
+      <input type="file" name="picture" (change)="fileChange($event)" />
+    </div>
+  </div>
+  

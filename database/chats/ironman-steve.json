@@ -1,0 +1,13 @@
+{
+    "_id" : ObjectId("63ee90df4a8cfcfa1f9c0f76"),
+    "userA" : "ironman",
+    "userB" : "steve",
+    "messages" : [ 
+        {
+            "sender" : "ironman",
+            "text" : "Zdravo steve",
+            "time" : "2023-02-19T13:17:26.417Z"
+        }
+    ],
+    "__v" : 0
+}

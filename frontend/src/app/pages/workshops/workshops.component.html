@@ -1,0 +1,78 @@
+<!-- <h2>Workshops</h2> -->
+<form class="d-flex" role="search">
+  <div class="src" >
+    <input type='text' name='kor_ime' class="form-control me-2" placeholder="Search.." aria-label="Search" [(ngModel)]='searchParam'>
+    <button class="btn btn-outline-success" (click)=search() >Search</button>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Sort by
+      </button>
+      <ul class="dropdown-menu">
+        <li style="cursor:pointer" (click)="sortName()" ><a class="dropdown-item" >Name</a></li>
+        <li style="cursor:pointer" (click)="sortDate()" ><a class="dropdown-item" >Date</a></li>
+      </ul>
+    </div>
+  </div>
+</form>
+
+<!-- <table>
+  <tr>
+    <th class="sort_name" (click)="sortName()">
+      Name
+    </th>
+    <th>Location</th>
+    <th class="sort_name" (click)="sortDate()">
+      Date
+    </th>
+    <th>Basic info</th>
+    <th>All information</th>
+    <th>Creator</th>
+    <th>Likes</th>
+    <th>Like</th>
+  </tr>
+  <tr *ngFor='let w of radionice'>
+    <td>{{w.name}}</td>
+    <td>{{w.location}}</td>
+    <td>{{w.date.toLocaleDateString()}}</td>
+    <td>{{w.basicinfo}}</td>
+    <td>{{w.longinfo}}</td>
+    <td>{{w.creator}}</td>
+    <td>{{w.likes.length}}</td>
+    <td><button (click)='like(w)'>Lajkuj</button></td>
+  </tr>
+</table>
+<br> -->
+
+<div class="container mt-5 mb-5" *ngIf="prijave.length>0">
+  <h1 class="text-center">All workshops <span class="highlight">I signed up for</span> </h1>
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let w of prijave" >
+      <div class="workbox mt-3 mb-3">
+        <img src="{{w.photo}}" alt="">
+        <h1>{{w.name}}</h1>
+        <p>{{w.basicinfo}}</p>
+        <p>{{w.location}} - {{w.date.toLocaleDateString()}}</p>
+        <a class="detailsbtn" [routerLink]="['/winfo', w.id]" *ngIf="me" ><i class="bi bi-info-square-fill"></i> &nbsp;More details </a>&nbsp;&nbsp;&nbsp;
+        <a class="editbtn" [routerLink]="['/edit', w.id]" *ngIf="me && me.username == w.creator" ><i class="bi bi-gear-wide-connected"></i> &nbsp;Edit </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-5 mb-5" >
+  <h1 class="text-center">All workshops <span class="highlight">available now</span> </h1>
+  <div class="row">
+    <div class="col-lg-4" *ngFor="let w of radionice" >
+      <div class="workbox mt-3 mb-3" >
+        <img src="{{w.photo}}" alt="">
+        <h1>{{w.name}}</h1>
+        <p>{{w.basicinfo}}</p>
+        <p>{{w.location}} - {{w.date.toLocaleDateString()}}</p>
+        <a class="detailsbtn" [routerLink]="['/winfo', w.id]" *ngIf="me" ><i class="bi bi-info-square-fill"></i> &nbsp;More details </a>&nbsp;&nbsp;&nbsp;
+        <a class="editbtn" [routerLink]="['/edit', w.id]" *ngIf="me && me.username == w.creator" ><i class="bi bi-gear-wide-connected"></i> &nbsp;Edit </a>&nbsp;
+        <button type="button" *ngIf="me && me.username == w.creator" (click)="cancelWorkshop(w.name)" class="btn btn-danger"><i class="bi bi-file-earmark-x"></i>&nbsp;Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>

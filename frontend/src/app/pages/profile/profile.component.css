@@ -1,0 +1,200 @@
+.sort_name:hover{
+    color:blue;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  hr {
+    margin: 20px 0;
+    border-top: 2px solid #ccc;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  th.sort_name:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .img-thumbnail {
+    border: 0;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  span {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  div {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .user-info img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .user-info span {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  .user-info .username {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .user-info .contact-info {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .comment-container {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .comment {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+
+  .workshop-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .liked-workshops {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .workshop {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 16px;
+    margin-bottom: 16px;
+    padding: 8px;
+    width: calc(33.33% - 16px);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .workshop {
+      width: calc(50% - 16px);
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .workshop {
+      width: 100%;
+    }
+  }
+  
+
+
+
+  /* all users: */
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  td img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  td:last-child {
+    text-align: center;
+  }
+  
+  .edit-btn, .delete-btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+  }
+  
+  .edit-btn:hover, .delete-btn:hover {
+    cursor: pointer;
+  }
+  

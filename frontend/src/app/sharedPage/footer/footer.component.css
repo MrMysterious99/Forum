@@ -1,0 +1,41 @@
+.footer
+{
+    overflow: hidden;
+    position: sticky;
+    top: 100%;
+    background-color: #303434;
+    padding: 20px 10px;
+}
+
+h5
+{
+    color: #fff;
+    text-decoration: none;
+    padding: 0px;
+}
+
+img{
+    height: 15vh;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 5px;
+    font-size: 17px;
+}
+
+a:hover{
+    color: lightgreen;
+}
+
+
+i{
+    padding: 0px 10px;
+}
+
+/* 
+.ime{
+    display: flex;
+    justify-content: center;
+} */

@@ -1,0 +1,223 @@
+/* .carousel-item{
+    height: 32rem;
+    position: relative;
+    background-color: lightgreen;
+}
+.container{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 50px;
+} */
+
+.highlight{
+    color: green;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.car-item{
+    height: 700px;
+}
+
+.car-img{
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .poruka{
+    border-radius: 5px;
+    background-color: lightskyblue;
+}
+
+.osoba{
+    border-radius: 5px;
+    background-color: lightgreen;
+} */
+
+
+
+
+
+.workshop-info {
+    margin-bottom: 24px;
+  }
+  
+  .workshop-long-info {
+    font-size: 18px;
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  
+  .workshop-question {
+    font-size: 16px;
+  }
+  
+  .workshop-organizer {
+    color: #007bff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .workshop-divider {
+    border-top: 2px solid #f0f0f0;
+    margin: 32px 0;
+  }
+  
+  .workshop-likes {
+    margin-top: 32px;
+  }
+  
+  .workshop-likes-heading {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .workshop-likes-icon {
+    font-size: 36px;
+    vertical-align: middle;
+    margin-right: 16px;
+  }
+  
+  /* .workshop-comment {
+    margin-top: 16px;
+  }
+  
+  .workshop-comment-user {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .workshop-comment-text {
+    font-size: 16px;
+    line-height: 1.5;
+  } */
+
+
+  .workshop-divider {
+    border-top: 2px solid #f0f0f0;
+    margin: 32px 0;
+  }
+
+  .comment-section {
+    margin-top: 32px;
+  }
+  
+  .comment-section-heading {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .comment {
+    display: flex;
+    margin-bottom: 24px;
+  }
+  
+  .comment-user {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+  
+  .comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  .comment-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .comment-username {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  
+  .comment-date {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .comment-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  
+
+
+
+  .workshop-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .workshop-info {
+    flex: 1 1 60%;
+    padding: 32px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 16px;
+  }
+  
+  .workshop-info-heading {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .workshop-info-description {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+    justify-content: left;
+  }
+  
+  /* .workshop-info-button {
+    display: flex;
+    margin: 0 auto;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    background-color: #1DB954;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    justify-content: right;
+  }
+  
+  .workshop-info-button:hover {
+    background-color: #177c3e;
+  } */
+  
+  /* .workshop-likes {
+    flex: 1 1 40%;
+    padding: 32px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .workshop-likes-heading {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .workshop-likes-icon {
+    margin-right: 8px;
+  }
+   */
+
+   .workshop-likes {
+    /* flex: 1 1 40%; */
+    padding: 32px;
+    /* border: 1px solid #ccc; */
+    border-radius: 8px;
+  }

@@ -1,0 +1,129 @@
+ <div id="carouselExample" class="carousel slide" *ngIf="workshop.gallery.length > 0" >
+
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <div *ngFor="let k of workshop.gallery;index as i" >
+            <button *ngIf="i>0" type="button" data-bs-target="#carouselExample" [attr.data-bs-slide-to]="i" ></button>
+        </div>
+        <!-- <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button> -->
+    </div>
+
+    <div class="carousel-inner">
+        <div class="carousel-item active car-item">
+            <img src="{{workshop.gallery[0].photo}}" class="d-block w-100 car-img" alt="...">
+            <div class="carousel-caption top-0 mt-4">
+                <p class=" fs-3 mt-5" >{{workshop.location}} - {{workshop.date.toLocaleDateString()}}</p>
+                <p class="display-1 fw-bolder text-capitalize" >{{workshop.name}}</p>
+                <button *ngIf="workshop.capacity > workshop.participants.length && signedIn == false" class="btn btn-primary bottom-1 px-4 py-2 fs-5 mt-5" (click)="signUp()">Sign Up</button>
+            </div>
+        </div>
+        <div *ngFor="let pic of workshop.gallery;index as i" >
+            <div class="carousel-item car-item" *ngIf="i>0">
+                <img src="{{pic.photo}}" class="d-block w-100 car-img" alt="...">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class=" fs-3 mt-5" >{{workshop.location}} - {{workshop.date.toLocaleDateString()}}</p>
+                    <p class="display-1 fw-bolder text-capitalize" >{{workshop.name}}</p>
+                    <button *ngIf="workshop.capacity > workshop.participants.length && signedIn == false" class="btn btn-primary px-4 py-2 fs-5 mt-5" (click)="signUp()" >Sign Up</button>
+                </div>
+            </div>
+        </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<!-- nema slika u galeriji -->
+
+<div *ngIf="workshop.gallery.length == 0" >
+    <div id="carouselExample2" class="carousel slide">
+    
+        <div class="carousel-inner">
+            <div class="carousel-item active car-item">
+                <img src="{{workshop.photo}}" class="d-block w-100 car-img" alt="...">
+                <div class="carousel-caption top-0 mt-4">
+                    <p class=" fs-3 mt-5" >{{workshop.location}} - {{workshop.date.toLocaleDateString()}}</p>
+                    <p class="display-1 fw-bolder text-capitalize" >{{workshop.name}}</p>
+                    <button *ngIf="workshop.capacity > workshop.participants.length && signedIn == false" class="btn btn-primary bottom-1 px-4 py-2 fs-5 mt-5" (click)="signUp()">Sign Up</button>
+                </div>
+            </div>
+      </div>
+    </div>
+</div>
+
+<!-- <div>
+    <p class="fs-5">{{workshop.longinfo}}</p>
+    <p class="fs-6">If you have any further questions <span (click)="initChat()" class="highlight">send organizer a message.</span> </p>
+  </div>
+  <hr/>
+  <div>
+    <h4>
+        <i class="bi bi-hand-thumbs-up"></i> Likes: {{workshop.likes.length}}
+    </h4>
+  </div>
+
+  <div *ngFor="let com of workshop.comments">
+    <div class="osoba">
+        {{com.username}}, {{com.date.toLocaleDateString()}} {{com.date.toLocaleTimeString()}}
+    </div>
+    <div class="poruka" >
+        {{com.text}}
+    </div>
+  <br/>
+
+  </div> -->
+
+  <!-- <div class="workshop-info">
+    <p class="workshop-long-info">{{workshop.longinfo}}</p>
+    <p class="workshop-question">
+      If you have any further questions, 
+      <span (click)="initChat()" class="workshop-organizer">send the organizer a message.</span>
+    </p>
+  </div>
+  
+  <hr class="workshop-divider">
+  <div class="workshop-likes">
+    <h4 class="workshop-likes-heading">
+      <i class="bi bi-hand-thumbs-up workshop-likes-icon"></i> Likes: {{workshop.likes.length}}
+    </h4>
+  </div> -->
+  
+
+  <div class="workshop-container">
+    <div class="workshop-info">
+      <h2 class="workshop-info-heading">Workshop Info</h2>
+      <p class="workshop-info-description">{{workshop.longinfo}}</p>
+      <!-- <button class="workshop-info-button" (click)="initChat()">Send a Message to the Organizer</button> -->
+    <p class="fs-6">If you have any further questions <span (click)="initChat()" class="highlight">send organizer a message.</span> </p>
+
+    </div>
+    <div class="workshop-likes">
+      <h4 class="workshop-likes-heading">
+        <i class="bi bi-hand-thumbs-up workshop-likes-icon"></i> Likes: {{workshop.likes.length}}
+      </h4>
+    </div>
+  </div>
+  
+
+
+  <div class="comment-section">
+    <h2 class="comment-section-heading">Comments</h2>
+    <div *ngFor="let com of workshop.comments" class="comment">
+      <div class="comment-user">
+        <img src="{{me.photo}}" alt="{{com.username}} avatar" class="comment-avatar">
+        <div class="comment-details">
+          <div class="comment-username">{{com.username}}</div>
+          <div class="comment-date">{{com.date | date:'MMM d, y h:mm a'}}</div>
+        </div>
+      </div>
+      <div class="comment-text">{{com.text}}</div>
+    </div>
+  </div>
